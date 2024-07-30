@@ -4,9 +4,8 @@ namespace App\GraphQL\Queries;
 
 final readonly class Hello
 {
-    /** @param  array{}  $args */
-    public function __invoke(null $_, array $args)
+    public function __invoke(): string
     {
-        // TODO implement the resolver
+      return 'world';
     }
 }
