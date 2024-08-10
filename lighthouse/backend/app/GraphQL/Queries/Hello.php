@@ -4,8 +4,12 @@ namespace App\GraphQL\Queries;
 
 final readonly class Hello
 {
-    public function __invoke(): string
+    public function __invoke(): array
     {
-      return 'world';
+      return [
+        'world' => 'test',
+        'foo' => 'bar',
+        'list' => ['a', 'b', 'c'],
+      ];
     }
 }
