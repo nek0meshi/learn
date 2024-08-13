@@ -1,7 +1,7 @@
 const SERVER_URL = 'http://localhost:8000/graphql';
 
 async function getHelloWorld() {
-  const query = '{hello {world, foo, list}}'
+  const query = '{hello {world, foo, list}, tasks {title, status}}'
 
   await queryRequest(new URLSearchParams({ query }))
 }

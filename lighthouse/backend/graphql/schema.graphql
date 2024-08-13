@@ -19,6 +19,7 @@ type Query {
   ): [User!]! @paginate(defaultCount: 10)
 
   hello: Hello!
+  tasks: [Task!]! @all
 }
 
 "Account of a person who utilizes this application."
@@ -45,4 +46,8 @@ type Hello {
   world: String
   foo: String
   list: [String!]
+}
+type Task {
+  status: Int!
+  title: String!
 }
