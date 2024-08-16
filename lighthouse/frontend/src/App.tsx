@@ -1,4 +1,5 @@
 import { useQuery, gql } from '@apollo/client'
+import { List, ListItem, Container } from '@mui/material'
 import './App.css'
 
 function App() {
@@ -13,14 +14,16 @@ function App() {
   `)
 
   return (
-    <div>
-      Hello World
+    <Container>
+      <h1>TODO List</h1>
       {error && <div>error</div>}
       {loading && <div>is loading...</div>}
-      {data && data.tasks.map((task: any) => (
-        <div key={task.id}>{task.title}</div>
-      ))}
-    </div>
+      <List>
+        {data && data.tasks.map((task: any) => (
+          <ListItem key={task.id}>{task.title}</ListItem>
+        ))}
+      </List>
+    </Container>
   )
 }
 
