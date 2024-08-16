@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "biome:fix": "npx @biomejs/biome lint --write ."
+    "biome:fix": "npx @biomejs/biome lint --write"
   },
   "dependencies": {
     "@apollo/client": "^3.11.4",
