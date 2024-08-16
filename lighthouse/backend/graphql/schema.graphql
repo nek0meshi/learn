@@ -48,6 +48,7 @@ type Hello {
   list: [String!]
 }
 type Task {
+  id: Int!
   status: Int!
   title: String!
 }
