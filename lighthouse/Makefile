@@ -19,3 +19,7 @@ composer:
 .PHONY: composer-sh
 composer-sh:
 	docker run --rm -it -v $(PWD)/backend:/app composer:latest sh
+
+.PHONY: frontend
+frontend:
+	cd frontend && npm ci && npm run dev
